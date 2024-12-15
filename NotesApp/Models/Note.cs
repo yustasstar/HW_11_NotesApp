@@ -9,18 +9,22 @@ namespace NotesApp.Models
 
         [Required]
         [MaxLength(255)]
+        [DataType(DataType.MultilineText)]
         public string Title { get; set; } = string.Empty;
 
         [Required]
         [MinLength(1)]
         [MaxLength(1024)]
+        [DataType(DataType.MultilineText)]
         public string Content { get; set; } = string.Empty;
 
         [Display(Name = "Created At")]
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        [Editable(false)]
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         [Display(Name = "Last Updated")]
-        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        [Editable(false)]
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         public string Tags { get; set; } = string.Empty;
     }
