@@ -21,7 +21,7 @@ namespace NotesApp.Migrations
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AlternativePhone = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
+                    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -38,7 +38,7 @@ namespace NotesApp.Migrations
                     Content = table.Column<string>(type: "nvarchar(1024)", maxLength: 1024, nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Tags = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Tags = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

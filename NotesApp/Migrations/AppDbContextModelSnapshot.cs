@@ -34,7 +34,6 @@ namespace NotesApp.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
@@ -73,7 +72,6 @@ namespace NotesApp.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Tags")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")

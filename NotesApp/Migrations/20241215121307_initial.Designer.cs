@@ -12,7 +12,7 @@ using NotesApp.Data;
 namespace NotesApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241215112157_initial")]
+    [Migration("20241215121307_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -37,7 +37,6 @@ namespace NotesApp.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
@@ -76,7 +75,6 @@ namespace NotesApp.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Tags")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")

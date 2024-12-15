@@ -26,6 +26,6 @@ namespace NotesApp.Models
         [Editable(false)]
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-        public string Tags { get; set; } = string.Empty;
+        public string? Tags { get; set; } //= string.Empty;
     }
 }

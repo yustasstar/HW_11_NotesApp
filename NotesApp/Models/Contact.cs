@@ -31,6 +31,6 @@ namespace NotesApp.Models
 
         [MaxLength(255)]
         [DataType(DataType.MultilineText)]
-        public string Description { get; set; } = string.Empty;
+        public string? Description { get; set; } //= string.Empty; - string will be required
     }
 }

@@ -1,7 +1,7 @@
 ﻿@model NotesApp.Models.Note
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Create";
 }
 
 <div class="text-center my-4">
@@ -13,20 +13,21 @@
         <div class="card-body">
             <h4 class="text-info">Note</h4>
             <hr />
-            <form asp-action="Edit">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="Id" />
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-4"></div>
 
                 <div class="form-group">
                     <label asp-for="Title" class="control-label"></label>
                     <input asp-for="Title" class="form-control" />
                     <span asp-validation-for="Title" class="text-danger"></span>
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Content" class="control-label"></label>
                     <input asp-for="Content" class="form-control" />
                     <span asp-validation-for="Content" class="text-danger"></span>
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Tags" class="control-label"></label>
                     <input asp-for="Tags" class="form-control" />
@@ -34,13 +35,13 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" value="Save" class="btn btn-primary" />
+                    <input type="submit" value="Create" class="btn btn-primary" />
                 </div>
             </form>
         </div>
     </div>
 
-    <div class="form-group mt-4">
+    <div>
         <a asp-action="Index" class="btn btn-secondary">Back to List</a>
     </div>
 </section>
